@@ -48,11 +48,8 @@ class ModHash(HashScheme):
         """        
         self.number_of_nodes += 1
         self.id_node += 1
-        #hash_value = self.__get_hash(new_node)
-        #if hash_value not in self.nodes.keys():
         self.nodes[self.id_node] = new_node
         return 0
-        #return 1
 
     def remove_node(self, node):
         """
@@ -61,11 +58,8 @@ class ModHash(HashScheme):
         scheme_name.
         """
         self.number_of_nodes -= 1
-        #hash_value = self.__get_hash(node)
-        #if hash_value in self.nodes.keys():
         del self.nodes[int(hashlib.md5(node.encode()).hexdigest(),16) % self.number_of_nodes]
         return 0
-        #return 1
 
     def hash(self, value):
         """

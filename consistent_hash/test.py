@@ -48,7 +48,6 @@ def run(words):
   my_store.add_node("Node 1")
   my_store.add_node("Node 2")
   my_store.add_node("Node 3")
-  my_store.add_node("Node 4")
   
   my_store.dump()
   
@@ -76,10 +75,7 @@ def run(words):
   """
   my_store.add_node("Node 1")
   my_store.dump()
-
-  my_store.add_node("Node 5")
-  my_store.dump()
-
+  
 
 if __name__ == '__main__':
 
