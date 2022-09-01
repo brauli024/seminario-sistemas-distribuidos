@@ -68,6 +68,7 @@ class Store:
             resources stored in that node need to be rebalanced (removed from a
             node and added to another one).
             """
+            
             if prev_node is not None:
                 resources = self.nodes[prev_node].resources.copy()
 
@@ -77,6 +78,7 @@ class Store:
                     if target_node is not None and target_node != prev_node:
                         self.nodes[prev_node].resources.remove(element)
                         self.nodes[target_node].resources.append(element)
+            
 
     def remove_node(self, node):
         """

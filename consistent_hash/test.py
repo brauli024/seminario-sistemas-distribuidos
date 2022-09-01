@@ -38,7 +38,7 @@ def run(words):
   to the store, the selected hash scheme is used to determine where to place
   the records.
   """
-  my_hash = CHash()
+  my_hash = ModHash()
   my_store = Store(my_hash)
   
   
@@ -48,6 +48,7 @@ def run(words):
   my_store.add_node("Node 1")
   my_store.add_node("Node 2")
   my_store.add_node("Node 3")
+  my_store.add_node("Node 4")
   
   my_store.dump()
   
@@ -76,6 +77,8 @@ def run(words):
   my_store.add_node("Node 1")
   my_store.dump()
 
+  my_store.add_node("Node 5")
+  my_store.dump()
 
 
 if __name__ == '__main__':
